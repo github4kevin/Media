@@ -1,0 +1,161 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Movies>
+
+@{
+    ViewData["Title"] = "Movies";
+    ViewData["Controller"] = "Movies";
+    ViewData["Action"] = "Index";
+    int RowNumber = 0;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<partial name="_HeaderSearch" />
+
+<br />
+
+<div class="container">
+    <p> &nbsp; &nbsp; </p>
+<br />
+    <partial name="_Pagination" />
+</div>
+
+<br />
+
+@if (Model.Data.Count() > 0)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Row
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieNameSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fa-solid fa-sort"></i>
+                        Name
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieSizeSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Size
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieQualitySort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Quality
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieDurationSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Duration
+                    </a>
+                </th>
+               <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieReleaseDateSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Released
+                    </a>
+                </th>                
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieAddedDateSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Added
+                    </a>
+                </th>
+                <th>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                   asp-route-sortOrder="@ViewBag.MovieContentRatingSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Rated
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieAudienceSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Audience
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieCriticSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Critic
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MovieFPSSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        FPS
+                    </a>
+                </th>                       
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+                RowNumber = RowNumber + 1;
+
+                <tr>
+                    <td>
+                        @RowNumber
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movie_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movie_size)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movie_quality)
+                    </td>
+
+                    <td class='text-nowrap'>
+                        @Html.DisplayFor(modelItem => item.movie_duration)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movie_release_date)
+                    </td>                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movie_added_date)
+                    </td>
+                    <td class='text-nowrap'>
+                        @Html.DisplayFor(modelItem => item.movie_content_rating)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movie_audience_rating)
+                    </td>   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movie_critic_rating)
+                    </td>                       
+                    <td>
+                        @Html.DisplayFor(modelItem => item.movie_fps)
+                    </td>                                        
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <partial name="_Pagination" />
+
+}
+else
+{
+    <br />
+
+    <p align="left">No movies have been entered into the database.</p>
+
+    <br />
+}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Browser Tab Name -->
+    <title>@ViewData["Title"]</title>
+
+    <!-- Quartz Bootstrap Themes CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.quartz.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.quartz.css" />
+
+    @*
+
+        <!-- FontAwesome v6.2.0 CSS -->
+        <link rel="stylesheet" href="~/css/all.css" />
+        <link rel="stylesheet" href="~/css/solid.css" />
+        <link rel="stylesheet" href="~/css/brands.css" />
+        <link rel="stylesheet" href="~/css/fontawesome.css" />
+
+        <!-- FontAwesome v4 & v5 Reference/Syntax CSS -->
+        <link rel="stylesheet" href="~/css/v4-shims.css" />
+        <link rel="stylesheet" href="~/css/v4-font-face.css" />
+        <link rel="stylesheet" href="~/css/v5-font-face.css" />
+
+    *@
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar HTML from Partial View -->
+    <header>
+        @await Html.PartialAsync("_NavigationBar")
+    </header>
+
+    <!-- HTML from the View(s) -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer at the Bottom of all Pages -->
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Media Files
+        </div>
+    </footer>
+
+    <!-- JavaScript References -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

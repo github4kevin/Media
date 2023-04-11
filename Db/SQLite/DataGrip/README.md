@@ -1,0 +1,1 @@
+# DataGrip Hidden Folder Exists
