@@ -60,8 +60,8 @@ namespace UI.Controllers
                Movies = Movies.OrderByDescending(m => m.movie_added_date);
                break;
 
-            case "MovieAddedDateDesc":
-               Movies = Movies.OrderByDescending(m => m.movie_name);
+            case "MovieAddedDate":
+               Movies = Movies.OrderBy(m => m.movie_added_date);
                break;
 
             case "MovieID":
