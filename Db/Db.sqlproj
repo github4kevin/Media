@@ -87,6 +87,8 @@
     <Build Include="dbo\Stored Procedures\spGetLibraries.sql" />
     <Build Include="dbo\Stored Procedures\spGetMovies.sql" />
     <Build Include="dbo\Stored Procedures\spGetShows.sql" />
+    <Build Include="dbo\Views\vwOldMovies.sql" />
+    <Build Include="dbo\Stored Procedures\spGetMissingMovies.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\Media.publish.xml" />

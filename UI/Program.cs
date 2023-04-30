@@ -8,6 +8,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ILibraries, LibraryServices>();
 builder.Services.AddScoped<IMovies, MovieServices>();
 builder.Services.AddScoped<IShows, ShowServices>();
+builder.Services.AddScoped<IMissingMovies, MissingMovieServices>();
 
 var app = builder.Build();
 
