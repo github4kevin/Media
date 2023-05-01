@@ -77,8 +77,6 @@
     <Build Include="dbo\Stored Procedures\spDistributeShows.sql" />
     <Build Include="dbo\Tables\Libraries.sql" />
     <Build Include="dbo\Tables\Movies.sql" />
-    <Build Include="dbo\Tables\OldMovies.sql" />
-    <Build Include="dbo\Tables\OldShows.sql" />
     <Build Include="dbo\Tables\PlexData.sql" />
     <Build Include="dbo\Tables\Shows.sql" />
     <Build Include="dbo\Views\vwLibraries.sql" />
@@ -87,8 +85,31 @@
     <Build Include="dbo\Stored Procedures\spGetLibraries.sql" />
     <Build Include="dbo\Stored Procedures\spGetMovies.sql" />
     <Build Include="dbo\Stored Procedures\spGetShows.sql" />
-    <Build Include="dbo\Views\vwOldMovies.sql" />
-    <Build Include="dbo\Stored Procedures\spGetMissingMovies.sql" />
+    <Build Include="dbo\Stored Procedures\spDeleteEverything.sql" />
+    <Build Include="dbo\Stored Procedures\spDistributeDuplicates.sql" />
+    <Build Include="dbo\Stored Procedures\spDistributeEpisodes.sql" />
+    <Build Include="dbo\Stored Procedures\spDistributeEverything.sql" />
+    <Build Include="dbo\Stored Procedures\spDistributeMusic.sql" />
+    <Build Include="dbo\Stored Procedures\spDistributeVideos.sql" />
+    <Build Include="dbo\Stored Procedures\spGetDuplicates.sql" />
+    <Build Include="dbo\Stored Procedures\spGetEpisodes.sql" />
+    <Build Include="dbo\Stored Procedures\spGetMusic.sql" />
+    <Build Include="dbo\Stored Procedures\spGetSeasons.sql" />
+    <Build Include="dbo\Stored Procedures\spGetVideos.sql" />
+    <Build Include="dbo\Tables\Duplicates.sql" />
+    <Build Include="dbo\Tables\Episodes.sql" />
+    <Build Include="dbo\Tables\Music.sql" />
+    <Build Include="dbo\Tables\Seasons.sql" />
+    <Build Include="dbo\Tables\Videos.sql" />
+    <Build Include="dbo\Views\vwDuplicates.sql" />
+    <Build Include="dbo\Views\vwEpisodes.sql" />
+    <Build Include="dbo\Views\vwMusic.sql" />
+    <Build Include="dbo\Views\vwSeasons.sql" />
+    <Build Include="dbo\Views\vwVideos.sql" />
+    <Build Include="dbo\Stored Procedures\spDistributeSeasons.sql" />
+    <Build Include="dbo\Stored Procedures\spGetMissing.sql" />
+    <Build Include="dbo\Views\vwMissing.sql" />
+    <Build Include="dbo\Tables\Missing.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\Media.publish.xml" />

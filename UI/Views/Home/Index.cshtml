@@ -1,8 +1,148 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-}
+    ViewData["Title"] = "PlexUI Home";
+    ViewData["Controller"] = "Home";
+    ViewData["Action"] = "Index";
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+<!-- Top Banner -->
+<div class="container">
+    <div class="col-10">
+        <div class="alert alert-primary alert-dismissible text-center" role="alert">
+            <button class="btn-close" type="button" data-dismiss="alert" title="Dismiss Alert"> </button>
+            This application is currently under development.
+        </div>
+    </div>
+</div>
+
+<!-- Header Section -->
+<div class="container text-center">
+    <div class="col-10">
+        <h1>
+            <span style="text-decoration: underline;">Welcome to the Plex Application</span>
+        </h1>
+        <p style="text-align: center;">This application is designed to quickly and easily browse through all the media
+            files that exist within the MbuguaServer. Below is the changelog for all features that currently exists,
+            what new feature has been released, what improvements have been made, and what features are to come.</p>
+    </div>
+</div>
+
+<!-- Body Area -->
+<div class="container">
+    <div class="col-10">
+        <h3 style="text-align: left;"><u>Changelog</u></h3>
+
+        <!-- 09/28/2022 - Release Notes -->
+        <p style="text-align: right;"><strong>09/28/2022</strong></p>
+        <p><span style="text-decoration: underline;"><strong>New Features</strong></span></p>
+        <ul>
+            <li>Added "Total Play Count" page</li>
+            <ul>
+                <li> This will allow me to view the total plays for all media and by which user.</li>
+            </ul>
+        </ul>
+        <p><span style="text-decoration: underline;"><strong>Improvements</strong></span></p>
+        <ul>
+            <li>Tweaked the "Naming" page by adding helpful columns. </li>
+        </ul>
+        <hr />
+
+        <!-- 09/21/2022 - Release Notes -->
+        <p style="text-align: right;"><strong>09/21/2022</strong></p>
+        <p><span style="text-decoration: underline;"><strong>New Features</strong></span></p>
+        <ul>
+            <li>Added the Movie Statistic page.</li>
+            <li>Added the Other Videos page to view all the media that I have downloaded from YouTube.</li>
+            <li>Added the Duplicates page to see if a video exists in the main server and in the backup server.
+                <ul>
+                    <li>This will assist with preventing a video from existing 2x and taking up unnecessary
+                        space.</li>
+                </ul>
+            </li>
+        </ul>
+        <p><span style="text-decoration: underline;"><strong>Improvements</strong></span></p>
+        <ul>
+            <li>Refined the views for:<br />
+                <ul>
+                    <li>TV Shows</li>
+                    <li>Movies</li>
+                    <li>Movie Statistics</li>
+                </ul>
+            </li>
+        </ul>
+        <hr />
+
+        <!-- 06/02/2022 - Release Notes -->
+        <p style="text-align: right;"><strong>06/02/2022</strong></p>
+        <p><span style="text-decoration: underline;"><strong>New Features</strong></span></p>
+        <ul>
+            <li>Created a working Contact Form that will:
+                <ul>
+                    <li>Send me an email with contents from the form.</li>
+                    <li>Get logged into the database.</li>
+                </ul>
+            </li>
+        </ul>
+        <p><span style="text-decoration: underline;"><strong>Improvements</strong></span></p>
+        <ul>
+            <li>Implemented Microsoft's User Secrets Management.</li>
+            <ul>
+                <li>This will hide the contact form credentials along with the database connection.</li>
+            </ul>
+            <li>Cleaned up the entire codebase using CodeMaid.</li>
+            <li>Changed header code to be left/right aligned for bootstrap 5.</li>
+            <li>Included show count for the library and folder entities.</li>
+            <ul>
+                <li>This will allow me to view the number of shows vs number of episodes.</li>
+                <li>I can also compare the number of shows vs number of movies.</li>
+            </ul>
+        </ul>
+
+        <hr />
+
+        <!-- 01/24/2022 - Release Notes -->
+        <p style="text-align: right;"><strong>01/24/2022</strong></p>
+        <p><span style="text-decoration: underline;"><strong>New Features</strong></span></p>
+        <ul>
+            <li>
+                Added the "Music" page to the application
+                <ul>
+                    <li>This will allow me to view all music files that exists on the server.</li>
+                    <li>Search, identify and track all music files on the server.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- 01/09/2022 - Release Notes -->
+        <hr />
+        <p style="text-align: right;"><strong>01/09/2022</strong></p>
+        <p><span style="text-decoration: underline;"><strong>Improvements</strong></span></p>
+        <ul>
+            <li>Improved the visual appearance of the detail views.</li>
+            <li>Added the "Previous" and "Next" buttons to the Movie &amp; Show detail pages.</li>
+        </ul>
+        <p><span style="text-decoration: underline;"><strong>Upcoming Features</strong></span></p>
+        <ul>
+            <li>Adding a video showcasing the application.</li>
+            <li>Dropdown list for easier/better searching.</li>
+            <li>Separate column sorting to an individual class.</li>
+            <li>Further improve the visual appearance in someway.</li>
+            <li>Come up with more ideas to improve the application.</li>
+        </ul>
+
+        <!-- Before 01/09/2022 -->
+        <hr />
+        <p style="text-align: right;"><strong>Before 01/09/2022</strong></p>
+        <p><span style="text-decoration: underline;"><strong>Existing Functionality</strong></span></p>
+        <ul>
+            <li>Search for media that exists within the MbuguaServer (Movies, Shows, and Music).</li>
+            <li>Identify Movie, Show, and Music details (Length, Size, Resolution, etc.).</li>
+            <li>Search media based on certain criterias (Actors, Genres, Album, Studio, Release Date, etc.).
+            </li>
+            <li>Submit a Contact Form to send feedback/questions regarding the application.</li>
+        </ul>
+  <!-- <a class="btn btn-primary" asp-controller="Contact" asp-action="Index" title="Contact Form"> Contact Form </a> -->
+    </div>
 </div>

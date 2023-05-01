@@ -8,7 +8,12 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ILibraries, LibraryServices>();
 builder.Services.AddScoped<IMovies, MovieServices>();
 builder.Services.AddScoped<IShows, ShowServices>();
-builder.Services.AddScoped<IMissingMovies, MissingMovieServices>();
+builder.Services.AddScoped<IMissing, MissingServices>();
+builder.Services.AddScoped<ISeasons, SeasonServices>();
+builder.Services.AddScoped<IMusic, MusicServices>();
+builder.Services.AddScoped<IEpisodes, EpisodeServices>();
+builder.Services.AddScoped<IVideos, VideoServices>();
+builder.Services.AddScoped<IDuplicates, DuplicateServices>();
 
 var app = builder.Build();
 

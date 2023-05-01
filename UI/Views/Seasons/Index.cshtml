@@ -1,0 +1,146 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Seasons>
+
+@{
+    ViewData["Title"] = "All Seasons";
+    ViewData["Controller"] = "Seasons";
+    ViewData["Action"] = "Index";
+    int RowNumber = 0;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<partial name="_HeaderSearch" />
+
+<br />
+
+<div class="container">
+    <p> &nbsp; &nbsp; </p>
+    </br>
+    <partial name="_Pagination" />
+</div>
+
+<br />
+
+@if (Model.Data.Count() > 0)
+{
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Row
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.ShowNameSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Show
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.FolderNameSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Folder
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.SeasonNumberSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        SEs
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.SeasonEpisodeSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        EPs
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.SeasonSizeSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Size
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.SeasonQualitySort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Quality
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.SeasonYearSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Year
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.SeasonDurationSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Duration
+                    </a>
+                </th>
+                                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.SeasonAddedDateSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Added
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+                RowNumber = RowNumber + 1;
+                <tr>
+                    <td>
+                        @RowNumber
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.show_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.season_number)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.season_episodes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.season_size)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.season_quality)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.season_release_year)
+                    </td>
+                    <td class='text-nowrap'>
+                        @Html.DisplayFor(modelItem => item.season_duration)
+                    </td>
+                                        <td class='text-nowrap'>
+                        @Html.DisplayFor(modelItem => item.season_added_date)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <partial name="_Pagination" />
+
+}
+else
+{
+    <br />
+
+    <p> No seasons have been entered into the database. </p>
+
+    <br />
+}

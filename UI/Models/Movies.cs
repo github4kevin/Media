@@ -5,9 +5,6 @@ namespace UI.Models
 {
    public class Movies
    {
-      [DisplayName("Folder ID")]
-      public int folder_id { get; set; }
-
       [Key]
       [DisplayName("Movie ID")]
       public int movie_id { get; set; }

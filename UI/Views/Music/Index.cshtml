@@ -1,0 +1,121 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Music>
+
+@{
+    ViewData["Title"] = "Music Files";
+    ViewData["Controller"] = "Music";
+    ViewData["Action"] = "Index";
+    int RowNumber = 0;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<partial name="_HeaderSearch" />
+
+<br />
+
+<div class="container">
+    <p> &nbsp; &nbsp; </p>
+    </br>
+    <partial name="_Pagination" />
+</div>
+
+<br />
+
+@if (Model.Data.Count() > 0)
+{
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Row
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MusicNameSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Name
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.ArtistNameSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Artist
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.AlbumNameSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Album
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MusicStudioSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Studio
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MusicSizeSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Size
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.MusicDurationSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Duration
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+
+                RowNumber = RowNumber + 1;
+
+                <tr>
+                    <td>
+                        @RowNumber
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.music_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.artist_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.album_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.music_studio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.music_size)
+                    </td>
+                    <td class="text-nowrap">
+                        @Html.DisplayFor(modelItem => item.music_duration)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <partial name="_Pagination" />
+
+}
+else
+{
+    <br />
+
+    <p align="left">No music records have been entered into the database.</p>
+
+    <br />
+}

@@ -5,8 +5,6 @@ namespace UI.Models
 {
    public class Shows
    {
-      [DisplayName("Folder ID")]
-      public int folder_id { get; set; }
 
       [Key]
       [DisplayName("Show ID")]

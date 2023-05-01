@@ -1,0 +1,99 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Videos>
+
+@{
+    ViewData["Title"] = "YouTube Videos";
+    ViewData["Controller"] = "Videos";
+    ViewData["Action"] = "Index";
+    int RowNumber = 0;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<partial name="_HeaderSearch" />
+
+<br />
+
+<div class="container">
+    <p> &nbsp; &nbsp; </p>
+    </br>
+    <partial name="_Pagination" />
+</div>
+
+<br />
+
+@if (Model.Data.Count() > 0)
+{
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Row
+                </th>
+                <th>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.VideoNameSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        YouTube Video Name
+                    </a>
+                </th>
+                <th>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.VideoQualitySort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Quality
+                    </a>
+                </th>
+                <th>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.VideoSizeSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Size
+                    </a>
+                </th>
+                <th>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.VideoDurationSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Duration
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+                RowNumber = RowNumber + 1;
+                <tr>
+                    <td>
+                        @RowNumber
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.video_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.video_quality)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.video_size)
+                    </td>
+                    <td class='text-nowrap'>
+                        @Html.DisplayFor(modelItem => item.video_duration)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <partial name="_Pagination" />
+
+}
+else
+{
+    <br />
+
+    <p> No videos have been entered into the database. </p>
+
+    <br />
+}

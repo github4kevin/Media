@@ -1,0 +1,128 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Episodes>
+
+@{
+    ViewData["Title"] = "All Episodes";
+    ViewData["Controller"] = "Episodes";
+    ViewData["Action"] = "Index";
+    int RowNumber = 0;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<partial name="_HeaderSearch" />
+
+<br />
+
+<div class="container">
+    <p> &nbsp; &nbsp; </p>
+    </br>
+    <partial name="_Pagination" />
+</div>
+
+<br />
+
+@if (Model.Data.Count() > 0)
+{
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Row
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.ShowNameSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Show
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    Episode Name
+                </th>
+                <th class='text-nowrap'>
+                    SEs
+                </th>
+                <th class='text-nowrap'>
+                    EPs
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.EpisodeQualitySort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Quality
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.EpisodeSizeSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Size
+                    </a>
+                </th>
+                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.EpisodeDurationSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Duration
+                    </a>
+                </th>
+                                <th class='text-nowrap'>
+                    <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
+                    asp-route-sortOrder="@ViewBag.EpisodeAddedDateSort" asp-route-pageNumber="@Model.PageNumber">
+                        <i class="fas fa-sort"></i>
+                        Added
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Data)
+            {
+                RowNumber = RowNumber + 1;
+                <tr>
+                    <td>
+                        @RowNumber
+                    </td>                  
+                    <td>
+                        @Html.DisplayFor(modelItem => item.show_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.episode_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.season_number)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.episode_number)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.episode_quality)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.episode_size)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.episode_duration)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.episode_added_date)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <partial name="_Pagination" />
+
+}
+else
+{
+    <br />
+
+    <p align="left"> No episodes have been entered into the database. </p>
+
+    <br />
+}
