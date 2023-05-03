@@ -110,6 +110,7 @@
     <Build Include="dbo\Stored Procedures\spGetMissing.sql" />
     <Build Include="dbo\Views\vwMissing.sql" />
     <Build Include="dbo\Tables\Missing.sql" />
+    <Build Include="dbo\Stored Procedures\spGetNaming_1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\Media.publish.xml" />

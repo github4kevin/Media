@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using UI.Interfaces;
 using UI.Models;
 
-namespace PlexUI.Controllers
+namespace UI.Controllers
 {
    public class SeasonsController : Controller
    {
