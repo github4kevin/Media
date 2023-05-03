@@ -12,7 +12,7 @@ AS
       EXEC spDistributeSeasons
       EXEC spDistributeEpisodes
       EXEC spDistributeMovies
-      EXEC spDistributeVideo
+      EXEC spDistributeVideos
       EXEC spDistributeMusic
       EXEC spDistributeLibraries
       EXEC spDistributeDuplicates
