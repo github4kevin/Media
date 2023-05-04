@@ -1,48 +1,61 @@
-
-# Media
-
-This will show important details related to the media files such as:
-
-- Name
-- Movies
-- Shows
-- Size
-- Codecs
-- Bitrates
-
-# Library Summary
+# Plex Library
 
 
 This page will show a summary of my media libraries
 
--  ***Library Name*** - Movies, Shows, Music, Photos, & YouTube
--  ***Scanned*** - The date I last scanned my Media
--  ***Show Total*** - Total number of shows
--  ***SD Total*** - Total number of Standard Definition (SD) files
--  ***HD Total*** - Total number of High Definition (HD) files
--  ***Library Total*** - Total number of all files
--  ***Size*** - Total size of each library
--  ***Duration*** - How long it will take to watch/listen to all files
+-  ***Library Name***
+-  ***Scanned***
+-  ***Show Total*** 
+-  ***SD Total***
+-  ***HD Total***
+-  ***Library Total***
+-  ***Size***
+-  ***Duration***
 
  *Screenshot below*
+![Library Summary](https://i.imgur.com/Rwgp6Fi.png)
 
-![Library Summary](https://github.com/github4kevin/Media/blob/a47cee40ba9e9911e98b62bb9b9dabfbb16c9466/UI/wwwroot/images/Libraries.png)
-
-# Movie Summaries
+# Plex Movies
 
 This page will show important details about my movie files
 
- - ***Name*** - Movie title name
- - ***Size*** - Total size of the movie
- - ***Duration*** - Runtime of the movie
- - ***Quality*** - Resolution (SD, HD, UHD)
- - ***Rating*** - Audience (IMDb) and Critic (Rotten Tomato)
- - ***Released*** - Date the movie was release
- - ***Added*** - Date I added the movie to my server
- - ***FPS*** - Frames per Second
+ - ***Movie Name***
+ - ***Size***
+ -  ***Quality***
+ - ***Duration***
+ - ***Released***
+ - ***Added***
+ - ***Mature Rating***
+ - ***Audience Rating***
+ - ***Critic Rating***
+ - ***FPS***
 
-*Screenshot below*
+*Screenshot*
+![Movie Summaries](https://i.imgur.com/u9Ay2F4.png)
 
-![Movie Summaries](https://github.com/github4kevin/Media/blob/a47cee40ba9e9911e98b62bb9b9dabfbb16c9466/UI/wwwroot/images/Movies.png)
+# Plex Shows
 
-# Show Summaries
+- ***Show Name***
+- ***Seasons***
+- ***Episodes***
+- ***Size***
+- ***Duration***
+- ***Quality***
+- ***Year***
+ - ***Mature Rating***
+ - ***Audience Rating***
+
+*Screenshot*
+![Shows](https://i.imgur.com/Mbaw1ec.png)
+
+# Plex Music
+
+- ***Name*** 
+- ***Arist***
+- ***Album***
+- ***Studio***
+- ***Size***
+- ***Duration***
+
+*Screenshot*
+![Music](https://i.imgur.com/qf07WM7.png)
