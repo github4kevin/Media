@@ -1,0 +1,204 @@
+﻿@model Shows
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Controller"] = "Shows";
+    ViewData["Action"] = "Details";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<h1> Show Details </h1>
+
+<br />
+
+<div class="containter">
+    <dl class="row"> 
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_id) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_id)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_name) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_name)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.folder_name) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.folder_name)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_seasons) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_seasons)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_episodes) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_episodes)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_size) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_size)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_duration) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_duration)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_release_date) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_release_date)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_added_date) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_added_date)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_rating) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_rating)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_content_rating) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_content_rating)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_genre) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_genre)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_view_count) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_view_count)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_last_viewed) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_last_viewed)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_view_device) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_view_device)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_studio) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_studio)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_stars) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_stars)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                <u> @Html.DisplayNameFor(model => model.show_finished) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_finished)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_summary) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_summary)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.show_collection) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.show_collection)
+                </dd>
+            </div>
+        </div>
+    </dl>
+</div>
+
+<a asp-controller="@ViewData["Controller"]" asp-action="Index" class="btn btn-primary" title="Back to List"> Back to List </a>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<a href="/@ViewData["Controller"]/@ViewData["Action"]/@ViewBag.PreviousID" class="btn btn-primary" title="Previous"> Previous </a>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<a href="/@ViewData["Controller"]/@ViewData["Action"]/@ViewBag.NextID" class="btn btn-primary" title="Next"> Next </a>
