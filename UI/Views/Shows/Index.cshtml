@@ -89,11 +89,14 @@
                 </th>
                 <th class='text-nowrap'>
                     <a asp-action=@ViewData["Action"] asp-route-GlobalSearch="@ViewBag.CurrentSearch"
-                   asp-route-sortOrder="@ViewBag.ShowRatingSort" asp-route-pageNumber="@Model.PageNumber">
+                       asp-route-sortOrder="@ViewBag.ShowRatingSort" asp-route-pageNumber="@Model.PageNumber">
                         <i class="fas fa-sort"></i>
                         Audience
                     </a>
                 </th>
+                @*<th>
+                    Details
+                </th>*@
             </tr>
         </thead>
         <tbody>
@@ -133,6 +136,10 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.show_rating)
                     </td>
+                    @*<td>
+                        <a asp-controller="Shows" asp-action="Details" asp-route-id="@item.show_id"
+                    class="btn btn-primary">Details</a>
+                    </td>*@
                 </tr>
             }
         </tbody>

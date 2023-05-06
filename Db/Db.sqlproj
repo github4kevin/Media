@@ -58,14 +58,16 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="Publish" />
-    <Folder Include="Spreadsheets" />
-    <Folder Include="SQLite" />
-    <Folder Include="SQLite\DbFile" />
-    <Folder Include="SQLite\Script" />
     <Folder Include="dbo\Functions" />
     <Folder Include="dbo\Stored Procedures" />
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\Views" />
+    <Folder Include="SQL" />
+    <Folder Include="SQL\ApexSQL" />
+    <Folder Include="SQL\SQLTips" />
+    <Folder Include="SQL\SQLForge" />
+    <Folder Include="SQL\SQLite" />
+    <Folder Include="SQL\SQLSettings" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Functions\fnGetProperCase.sql" />
@@ -111,10 +113,18 @@
     <Build Include="dbo\Views\vwMissing.sql" />
     <Build Include="dbo\Tables\Missing.sql" />
     <Build Include="dbo\Stored Procedures\spGetNaming_1.sql" />
-    <Build Include="SQLite\Script\SQLite.sql" />
+    <Build Include="SQL\SQLTips\SQL Tips - 2021.sql" />
+    <Build Include="SQL\SQLite\SQLite - Detailed.sql" />
+    <Build Include="SQL\SQLite\SQLite - Minimal.sql" />
+    <Build Include="dbo\Functions\fnReadableDate.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\Media.publish.xml" />
+    <None Include="SQL\ApexSQL\ApexSQL Complete Best Options - 120817.xml" />
+    <None Include="SQL\ApexSQL\ApexSQL Refactor - Perfect Profile%28s) - 07192021.xml" />
+    <None Include="SQL\SQLForge\ExecutedQueries.db" />
+    <None Include="SQL\SQLForge\Kevinator.xml" />
+    <None Include="SQL\SQLSettings\SQLSettings_07192021.vssettings" />
   </ItemGroup>
   <Import Condition="'$(NetCoreBuild)' == 'true'" Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
