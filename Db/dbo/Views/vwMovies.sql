@@ -22,8 +22,8 @@ AS
 		  m.movie_file_type,
 
 		  /*******************
-	 		  Grid Sorting Columns
-	 		  *******************/
+	 	   Grid Sorting Columns
+	 	  *******************/
 
 		  m.movie_size AS movie_sort_size,
 		  m.movie_duration AS movie_sort_duration,

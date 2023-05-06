@@ -6,7 +6,7 @@ CREATE VIEW vwLibraries
 AS
    SELECT l.library_id, 
 		  l.library_name,
-		  (CAST('20230502' AS DATETIME)) as library_scanned_date,
+		  (CAST('20230506' AS DATETIME)) as library_scanned_date,
 		  l.show_total,
 		  (SELECT COUNT(*)
 		   FROM PlexData AS pd

@@ -32,8 +32,8 @@ namespace UI.Controllers
          ViewBag.MovieDurationSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieDuration" ? "MovieDuration" : "MovieDurationDesc";
          ViewBag.MovieReleaseDateSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieReleaseDate" ? "MovieReleaseDate" : "MovieReleaseDateDesc";
          ViewBag.MovieAddedDateSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieAddedDate" ? "MovieAddedDate" : "MovieAddedDateDesc";
-        ViewBag.MovieContentRatingSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieContentRating" ? "MovieContentRating" : "MovieContentRatingDesc";
-        ViewBag.MovieAudienceSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieAudience" ? "MovieAudience" : "MovieAudienceDesc";   
+         ViewBag.MovieContentRatingSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieContentRating" ? "MovieContentRating" : "MovieContentRatingDesc";
+         ViewBag.MovieAudienceSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieAudience" ? "MovieAudience" : "MovieAudienceDesc";   
          ViewBag.MovieCriticSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieCritic" ? "MovieCritic" : "MovieCriticDesc";           
          ViewBag.MovieFPSSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieFPS" ? "MovieFPS" : "MovieFPSDesc";   
          ViewBag.MovieFileTypeSort = String.IsNullOrEmpty(sortOrder) || sortOrder != "MovieFileType" ? "MovieFileType" : "MovieFileTypeDesc";            

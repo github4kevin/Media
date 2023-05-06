@@ -14,7 +14,6 @@ builder.Services.AddScoped<IMusic, MusicServices>();
 builder.Services.AddScoped<IEpisodes, EpisodeServices>();
 builder.Services.AddScoped<IVideos, VideoServices>();
 builder.Services.AddScoped<INaming, NamingServices>();
-builder.Services.AddScoped<IDuplicates, DuplicateServices>();
 
 var app = builder.Build();
 
