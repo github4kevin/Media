@@ -111,6 +111,7 @@
     <Build Include="dbo\Views\vwMissing.sql" />
     <Build Include="dbo\Tables\Missing.sql" />
     <Build Include="dbo\Stored Procedures\spGetNaming_1.sql" />
+    <Build Include="SQLite\Script\SQLite.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\Media.publish.xml" />

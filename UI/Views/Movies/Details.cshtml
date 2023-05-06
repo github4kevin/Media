@@ -1,0 +1,212 @@
+﻿@model Movies
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Controller"] = "Movies";
+    ViewData["Action"] = "Details";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<h1>Movie Details</h1>
+
+<br />
+
+<div class="container">
+    <dl class="row">
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_id) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_id)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_name) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_name)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.folder_name) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.folder_name)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_quality) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_quality)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_duration) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_duration)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_release_date) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_release_date)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_added_date) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_added_date)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_rating) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_rating)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_content_rating) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_content_rating)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_genre) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_genre)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_studio) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_studio)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_country) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_country)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_view_count) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_view_count)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_last_view) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_last_view)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_view_device) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_view_device)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_stars) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_stars)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_directors) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_directors)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_collection) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_collection)
+                </dd>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_tagline) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_tagline)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_summary) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_summary)
+                </dd>
+            </div>
+            <div class="col-sm-4">
+                <dt>
+                    <u> @Html.DisplayNameFor(model => model.movie_file_path) </u>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.movie_file_path)
+                </dd>
+            </div>
+        </div>
+    </dl>
+</div>
+
+<a asp-controller="@ViewData["Controller"]" asp-action="Index" class="btn btn-primary" title="Back to List"> Back to List </a>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<a href="/@ViewData["Controller"]/@ViewData["Action"]/@ViewBag.PreviousID" class="btn btn-primary" title="Previous"> Previous </a>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<a href="/@ViewData["Controller"]/@ViewData["Action"]/@ViewBag.NextID" class="btn btn-primary" title="Next"> Next </a>
